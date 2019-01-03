@@ -6,9 +6,25 @@ import SEO from '../components/seo'
 import { theme, breakpoints } from '../helpers/styles'
 
 const keywords = [
-  'blog', 'software', 'development', 'bug', 'coffee', 'wendell', 'adriel',
-  'code', 'js', 'javascript', 'engineer', 'front-end', 'back-end', 'articles',
-  'tutorials', 'learn', 'react', 'vue', 'node'
+  'blog',
+  'software',
+  'development',
+  'bug',
+  'coffee',
+  'wendell',
+  'adriel',
+  'code',
+  'js',
+  'javascript',
+  'engineer',
+  'front-end',
+  'back-end',
+  'articles',
+  'tutorials',
+  'learn',
+  'react',
+  'vue',
+  'node',
 ]
 
 const ComingSoon = styled.div`

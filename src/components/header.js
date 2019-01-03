@@ -45,21 +45,36 @@ const SubTitle = styled.h2`
 const Header = () => (
   <Wrapper>
     <MainTitle>
-      <Link to="/" style={{
-        textDecoration: 'none'
-      }}
+      <Link
+        to="/"
+        style={{
+          textDecoration: 'none',
+        }}
       >
-        <span role="img" aria-label="bug">🐛</span>
-        <span role="img" aria-label="bug">🐛</span>
-        <span role="img" aria-label="bug">🐛</span>
+        <span role="img" aria-label="bug">
+          🐛
+        </span>
+        <span role="img" aria-label="bug">
+          🐛
+        </span>
+        <span role="img" aria-label="bug">
+          🐛
+        </span>
         <span className="separator">&</span>
-        <span role="img" aria-label="coffee">☕</span>
-        <span role="img" aria-label="coffee">☕</span>
-        <span role="img" aria-label="coffee">☕</span>
+        <span role="img" aria-label="coffee">
+          ☕
+        </span>
+        <span role="img" aria-label="coffee">
+          ☕
+        </span>
+        <span role="img" aria-label="coffee">
+          ☕
+        </span>
       </Link>
     </MainTitle>
     <SubTitle>
-      A tale of a humble engineer trapped in a world full of bugs, challenges and puzzles...
+      A tale of a humble engineer trapped in a world full of bugs, challenges
+      and puzzles...
     </SubTitle>
   </Wrapper>
 )

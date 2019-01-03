@@ -42,16 +42,38 @@ const Footer = () => (
     render={data => (
       <StyledFooter>
         <div>
-          <FooterIcon url={data.site.siteMetadata.author.social.github} icon={faGithubSquare} />
-          <FooterIcon url={data.site.siteMetadata.author.social.linkedin} icon={faLinkedin} />
-          <FooterIcon url={data.site.siteMetadata.author.social.twitter} icon={faTwitterSquare} />
-          <FooterIcon url={data.site.siteMetadata.author.social.medium} icon={faMedium} />
-          <FooterIcon url={data.site.siteMetadata.author.social.facebook} icon={faFacebookSquare} />
-          <FooterIcon url={data.site.siteMetadata.author.social.email} icon={faEnvelope} />
+          <FooterIcon
+            url={data.site.siteMetadata.author.social.github}
+            icon={faGithubSquare}
+          />
+          <FooterIcon
+            url={data.site.siteMetadata.author.social.linkedin}
+            icon={faLinkedin}
+          />
+          <FooterIcon
+            url={data.site.siteMetadata.author.social.twitter}
+            icon={faTwitterSquare}
+          />
+          <FooterIcon
+            url={data.site.siteMetadata.author.social.medium}
+            icon={faMedium}
+          />
+          <FooterIcon
+            url={data.site.siteMetadata.author.social.facebook}
+            icon={faFacebookSquare}
+          />
+          <FooterIcon
+            url={data.site.siteMetadata.author.social.email}
+            icon={faEnvelope}
+          />
         </div>
         <FooterMessage>
           Built with <span style={{ color: 'red' }}>❤</span> by{' '}
-          <a href={data.site.siteMetadata.author.social.website} target="_blank" rel="noopener noreferrer">
+          <a
+            href={data.site.siteMetadata.author.social.website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {data.site.siteMetadata.author.name}
           </a>
         </FooterMessage>
@@ -63,22 +85,22 @@ const Footer = () => (
 export default Footer
 
 const authorQuery = graphql`
-query AuthorQuery {
-  site {
-    siteMetadata {
-      author {
-        name
-        social {
-          website
-          github
-          linkedin
-          twitter
-          medium
-          facebook
-          email
+  query AuthorQuery {
+    site {
+      siteMetadata {
+        author {
+          name
+          social {
+            website
+            github
+            linkedin
+            twitter
+            medium
+            facebook
+            email
+          }
         }
       }
     }
   }
-}
 `
