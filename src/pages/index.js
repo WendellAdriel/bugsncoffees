@@ -27,7 +27,7 @@ const keywords = [
   'node',
 ]
 
-const Introduction = styled.div`
+const Introduction = styled.section`
   width: 100%;
   text-align: center;
   font-size: 2rem;
@@ -44,6 +44,19 @@ const Introduction = styled.div`
 
 const Highlight = styled.span`
   font-weight: 700;
+`
+
+const ComingSoon = styled.section`
+  width: 100%;
+  text-align: center;  
+  font-family: ${theme.fonts.cursive};
+  font-size: 4rem;
+  border-top: 1px solid ${theme.colors.primary};
+  padding-top: 1.5rem;
+
+  ${breakpoints.md} {
+    font-size: 5rem;
+  }
 `
 
 const IndexPage = () => (
@@ -71,6 +84,8 @@ const IndexPage = () => (
       of <Highlight>Eva, a 18 years old girl in the beginning of her career into Software Development, into IOLand, a Fantasy World
       ruled by code.</Highlight>
     </Introduction>
+
+    <ComingSoon>Prologue - Coming Soon...</ComingSoon>
   </Layout>
 )
 
