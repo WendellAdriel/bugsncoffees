@@ -1,6 +1,6 @@
 export const theme = {
   colors: {
-    primary: '#0a1b38',
+    primary: '#401b14',
   },
   fonts: {
     primary: '-apple-system, Ubuntu, sans-serif',

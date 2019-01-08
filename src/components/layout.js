@@ -18,7 +18,6 @@ const Main = styled.main`
   width: 90%;
   margin-left: 5%;
   padding: 1rem 0;
-  color: #222;
 
   ${breakpoints.md} {
     padding: 2rem 0;
@@ -33,6 +32,7 @@ const Layout = ({ children }) => (
           height: 100%;
           font-size: 10px;
           font-family: ${theme.fonts.primary};
+          color: ${theme.colors.primary};
         }
         body {
           min-height: 100%;
