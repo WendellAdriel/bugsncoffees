@@ -43,7 +43,7 @@ const Header = () => (
         textDecoration: 'none',
       }}
     >
-      <Logo src={logo}/>
+      <Logo src={logo} />
     </Link>
     <SubTitle>
       A tale of a humble engineer trapped in a world full of bugs, challenges
