@@ -108,13 +108,18 @@ export const listQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          fields {
-            slug
-          }
           excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMM D, YYYY")
             title
+            tags
+          }
+          fields {
+            slug
+            readingTime {
+              text
+              minutes
+            }
           }
         }
       }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
+import ReadingTime from './ReadingTime'
 import { theme, breakpoints } from '../helpers/styles'
 
 const Wrapper = styled.article`
@@ -26,6 +27,7 @@ const Wrapper = styled.article`
   }
 
   span {
+    font-family: ${theme.fonts.cursive};
     font-size: 1.5rem;
     font-weight: 700;
 
@@ -52,12 +54,20 @@ export default ({ post, index }) => (
   <>
     <Link to={post.fields.slug} key={index}>
       <Wrapper>
-        <h4>{post.frontmatter.title}</h4>
+        <h4>
+          {post.frontmatter.title}
+          <ReadingTime readingTime={post.fields.readingTime} />
+        </h4>
         <span>
           <span role="img" aria-label="date">
             🗓️
           </span>
           {post.frontmatter.date}
+          <small>
+            {' '}
+            - In this chapter you will learn about{' '}
+            {post.frontmatter.tags.join(', ')}
+          </small>
         </span>
         <p>{post.excerpt}</p>
       </Wrapper>
