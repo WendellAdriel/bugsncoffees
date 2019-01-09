@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://bugsncoffees.com',
     title: '🐛🐛🐛 & ☕☕☕',
     description:
       'A tale of a humble engineer trapped in a world full of bugs, challenges and puzzles...',

@@ -3,13 +3,17 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+import logo from '../images/bc.png'
+
+function SEO({ description, lang, meta, keywords, title, pathname }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+        const url = `${data.site.siteMetadata.siteUrl}${pathname}`
+
         return (
           <Helmet
             htmlAttributes={{
@@ -23,24 +27,8 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: metaDescription,
               },
               {
-                property: `og:title`,
-                content: title,
-              },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:type`,
-                content: `website`,
-              },
-              {
                 name: `twitter:card`,
-                content: `summary`,
-              },
-              {
-                name: `twitter:creator`,
-                content: data.site.siteMetadata.author.twitterUser,
+                content: `summary_large_image`,
               },
               {
                 name: `twitter:title`,
@@ -49,6 +37,34 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name: `twitter:description`,
                 content: metaDescription,
+              },
+              {
+                name: `twitter:image`,
+                content: logo,
+              },
+              {
+                name: `twitter:creator`,
+                content: data.site.siteMetadata.author.twitterUser,
+              },
+              {
+                property: `og:title`,
+                content: title,
+              },
+              {
+                property: `og:description`,
+                content: metaDescription,
+              },
+              {
+                name: `og:image`,
+                content: logo,
+              },
+              {
+                name: `og:url`,
+                content: url,
+              },
+              {
+                property: `og:type`,
+                content: `website`,
               },
             ]
               .concat(
@@ -69,6 +85,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
+  pathname: '',
   meta: [],
   keywords: [
     'blog',
@@ -96,6 +113,7 @@ SEO.defaultProps = {
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
+  pathname: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
@@ -107,6 +125,7 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
+        siteUrl
         title
         description
         author {

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import ReadingTime from '../components/ReadingTime'
 import { theme, breakpoints } from '../helpers/styles'
 
@@ -65,6 +66,11 @@ export default props => {
 
   return (
     <Layout>
+      <SEO
+        title={title}
+        description={post.excerpt}
+        pathname={props.location.pathname}
+      />
       <article>
         <ArticleHeader>
           <h1>{title}</h1>
@@ -92,7 +98,7 @@ export const query = graphql`
   query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      excerpt
+      excerpt(pruneLength: 250)
       frontmatter {
         date(formatString: "MMM D, YYYY")
         title
