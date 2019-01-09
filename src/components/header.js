@@ -8,8 +8,7 @@ import logo from '../images/bc.png'
 const Wrapper = styled.header`
   width: 100%;
   text-align: center;
-  padding: 3rem 1rem;
-  background: #fffdd0;
+  padding: 1.5rem;
 `
 
 const Logo = styled.img`
@@ -26,6 +25,7 @@ const Logo = styled.img`
 `
 
 const SubTitle = styled.h2`
+  color: ${theme.colors.secondary};
   font-family: ${theme.fonts.cursive};
   font-size: 1.5rem;
   font-weight: 700;

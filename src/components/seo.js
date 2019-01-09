@@ -70,7 +70,27 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: [],
+  keywords: [
+    'blog',
+    'software',
+    'development',
+    'bug',
+    'coffee',
+    'wendell',
+    'adriel',
+    'code',
+    'js',
+    'javascript',
+    'engineer',
+    'front-end',
+    'back-end',
+    'articles',
+    'tutorials',
+    'learn',
+    'react',
+    'vue',
+    'node',
+  ],
 }
 
 SEO.propTypes = {
