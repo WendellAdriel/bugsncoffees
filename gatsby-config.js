@@ -75,6 +75,16 @@ module.exports = {
         fonts: [`ubuntu\:100,300,400,700`, `charm\:400,700`],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-132287365-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: [],
+      },
+    },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
   ],
