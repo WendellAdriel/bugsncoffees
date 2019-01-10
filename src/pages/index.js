@@ -4,28 +4,10 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import AuthorInfo from '../components/AuthorInfo'
 import Post from '../components/Post'
+import { Introduction, Highlight } from '../helpers/base-visual-components'
 import { theme, breakpoints } from '../helpers/styles'
-
-const Introduction = styled.section`
-  width: 100%;
-  text-align: justify;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-
-  ${breakpoints.md} {
-    font-size: 2.5rem;
-  }
-`
-
-const Highlight = styled.span`
-  color: ${theme.colors.secondary};
-  font-weight: 700;
-
-  a {
-    border-bottom: 1px dashed ${theme.colors.secondary};
-  }
-`
 
 const PostList = styled.section`
   width: 100%;
@@ -53,25 +35,7 @@ const IndexPage = ({ data: { allMarkdownRemark } }) => (
       title="Home"
       description={`Bugs n' Coffees is my personal blog that I'll write about software development (mostly related to JS) where the articles will mix storytelling with references to music lyrics while exploring topics and tutorials about software development.`}
     />
-    <Introduction>
-      <Highlight>
-        Hey there, I'm{' '}
-        <a
-          href="https://wendelladriel.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Wendell Adriel
-        </a>{' '}
-        👋
-      </Highlight>
-      <br />
-      I'm a Software Engineer and I've been working with software development
-      since 2009. Besides that, I'm a <Highlight>BIG FAN</Highlight> of tabletop
-      RPG games. I play D&D since 2008 as a Dungeon Master and I really love
-      fantasy worlds, that's one of the reasons I love to be a Dungeon Master
-      because I can create these worlds.
-    </Introduction>
+    <AuthorInfo />
 
     <Introduction>
       <Highlight>Bugs n' Coffees (B&C)</Highlight> is my new personal project,

@@ -1,4 +1,5 @@
 ---
+id: prologue
 title: 🌄 Prologue - The Journey Begins
 date: '2019-01-08'
 tags: ['JavaScript']
@@ -45,3 +46,30 @@ Phasellus ac massa arcu. Sed ultricies metus id sapien volutpat, gravida mattis 
 Sed vitae ex turpis. Maecenas ut porttitor eros, at suscipit arcu. Sed nec ex libero. Pellentesque pulvinar, est at mollis vestibulum, lacus urna tincidunt augue, vel tristique arcu eros non ipsum. Quisque risus dui, fringilla eget viverra dignissim, sodales vitae nibh. Phasellus tincidunt semper lacus, vel interdum nisl vestibulum sit amet. Praesent varius dignissim tortor quis vulputate. Nullam tempus, ligula eu feugiat gravida, risus eros efficitur nisi, vel euismod augue magna non nibh. Praesent vitae finibus orci, quis lobortis nibh. Cras tempor eros ut dui malesuada finibus.
 
 Mauris pretium erat eu rutrum consectetur. Nulla in ipsum a ligula euismod lobortis a at tortor. Ut sagittis augue eget ante bibendum, id rutrum erat tincidunt. In eu tellus interdum, auctor est sed, gravida velit. Duis id aliquam urna. Nam nec sagittis libero. Nulla sit amet erat finibus, imperdiet purus commodo, efficitur lacus.
+
+# Testing
+
+```javascript
+console.log('testing')
+const test = [1, 2, 3].map(n => n * 2)
+```
+
+```php
+empty($myVar);
+// WOW
+
+$testing = 'test';
+$foo = 10;
+```
+
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`gatsby-remark-prismjs`],
+    },
+  },
+]
+```
