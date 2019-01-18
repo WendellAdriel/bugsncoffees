@@ -7,7 +7,6 @@ import {
   faLinkedin,
   faTwitterSquare,
   faMedium,
-  faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons'
 
 import FooterIcon from './FooterIcon'
@@ -58,10 +57,6 @@ const Footer = () => (
             icon={faMedium}
           />
           <FooterIcon
-            url={data.site.siteMetadata.author.social.facebook}
-            icon={faFacebookSquare}
-          />
-          <FooterIcon
             url={data.site.siteMetadata.author.social.email}
             icon={faEnvelope}
           />
@@ -95,7 +90,6 @@ const authorQuery = graphql`
             linkedin
             twitter
             medium
-            facebook
             email
           }
         }
